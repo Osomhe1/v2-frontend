@@ -4,13 +4,19 @@ import App from './App.jsx'
 import './index.css'
 import { NextUIProvider } from '@nextui-org/react'
 import { BrowserRouter } from 'react-router-dom'
+import DashboardContext from './context/Dashboard.jsx'
+import QueryProvider from './providers/QueryProvider.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <React.StrictMode>
-      <NextUIProvider>
-        <App />
-      </NextUIProvider>
+      <DashboardContext>
+        <QueryProvider>
+          <NextUIProvider>
+            <App />
+          </NextUIProvider>
+        </QueryProvider>
+      </DashboardContext>
     </React.StrictMode>
   </BrowserRouter>
 )

@@ -5,6 +5,8 @@ import Animation from './utilities/Animation'
 import ConfirmOtp from './components/auth/ConfirmOtp'
 import Signup from './components/auth/Signup'
 import OnBoard from './components/auth/OnBoard'
+import Home from './components/layout/center/Home'
+import RootLayout from './layouts/RootLayout'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
           <Route path='/confirm-otp' element={<ConfirmOtp />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/onboard' element={<OnBoard />} />
+          <Route path='/home2' element={<Home />} />
+          <Route path='/home' element={<RootLayout />}></Route>
         </Routes>
         {/* <Login /> */}
       </Animation>
